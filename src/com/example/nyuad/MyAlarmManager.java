@@ -20,9 +20,8 @@ public class MyAlarmManager extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
        _context= context;
-       //make get request
        
-       Uri server = Uri.parse("http://www.google.com");
+       Uri server = Uri.parse("http://alert2sign.mimix.me/");
        java.net.URI juri;
 	try {
 		juri = new java.net.URI(server.toString());
@@ -32,7 +31,7 @@ public class MyAlarmManager extends BroadcastReceiver {
 	}
    }
     
-    public static void getHttpResponse(URI uri) {
+    public void getHttpResponse(URI uri) {
     	Log.d("sup", "Going to make a get request");
     	StringBuilder response = new StringBuilder();
     	try {
